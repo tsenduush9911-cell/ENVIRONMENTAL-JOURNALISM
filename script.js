@@ -16,7 +16,7 @@ const fields = {
   kicker: document.querySelector('#edit-kicker'), title: document.querySelector('#edit-title'),
   description: document.querySelector('#edit-description'), image: document.querySelector('#edit-image'), video: document.querySelector('#edit-video')
 };
-const defaults = { kicker: document.querySelector('#hero-kicker').textContent, title: 'Цөл цөлждөг үү?', description: document.querySelector('#hero-description').textContent };
+const defaults = { kicker: document.querySelector('#hero-kicker').textContent, title: '\u0426\u04e9\u043b \u0446\u04e9\u043b\u0436\u0434\u04e9\u0433 \u04af\u04af?', description: document.querySelector('#hero-description').textContent };
 const openEditor = () => { editor.classList.add('open'); backdrop.classList.add('open'); editor.setAttribute('aria-hidden', 'false'); trigger.setAttribute('aria-expanded', 'true'); };
 const hideEditor = () => { editor.classList.remove('open'); backdrop.classList.remove('open'); editor.setAttribute('aria-hidden', 'true'); trigger.setAttribute('aria-expanded', 'false'); };
 const setText = (key, value) => {
