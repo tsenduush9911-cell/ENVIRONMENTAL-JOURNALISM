@@ -1,0 +1,29 @@
+Exit code: 0
+Wall time: 0.2 seconds
+Output:
+/* Official COP17 host-country agreement photograph with a subtle cinematic motion effect. */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -4%;
+  z-index: 0;
+  background-image: url("https://unccdcop17.org/data/files/viber_image_2025-05-02_18-33-57-552.jpg");
+  background-position: center;
+  background-size: cover;
+  filter: saturate(.82) contrast(1.05);
+  animation: cop17-pan 18s ease-in-out infinite alternate;
+}
+.hero::after {
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(4, 24, 39, .92) 0%, rgba(4, 30, 43, .65) 48%, rgba(4, 25, 37, .28) 100%), linear-gradient(0deg, rgba(3, 22, 35, .72), transparent 55%);
+}
+.hero-content, .hero-footer { z-index: 2; }
+.hero-visual { display: none; }
+@keyframes cop17-pan {
+  from { transform: scale(1.02) translate3d(0, 0, 0); }
+  to { transform: scale(1.12) translate3d(-2%, -1%, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero::before { animation: none; }
+}
+
