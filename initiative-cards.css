@@ -1,0 +1,57 @@
+Exit code: 0
+Wall time: 0.2 seconds
+Output:
+/* Three-card COP17-inspired initiative carousel. */
+.facts {
+  display: block;
+  padding: 110px 4vw 125px;
+  overflow: hidden;
+  background: #fff;
+  color: var(--ink);
+}
+.facts-title { max-width: 860px; margin: 0 auto 48px; text-align: center; }
+.facts-title h2 { color: var(--ink); }
+.initiative-grid {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(1280px, 100%);
+  height: 410px;
+  margin: 0 auto;
+  background: transparent;
+  gap: 0;
+}
+.initiative-card {
+  position: relative;
+  flex: 0 0 38%;
+  height: 320px;
+  margin: 0 -4.8%;
+  padding: 34px 30px;
+  overflow: hidden;
+  border-radius: 30px;
+  color: #fff;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 13px 35px rgba(8, 31, 43, .18);
+  transition: transform .35s ease, filter .35s ease, z-index .35s ease;
+}
+.initiative-card::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8, 26, 39, .38), rgba(7, 20, 32, .82)); }
+.initiative-card:hover { z-index: 4; transform: translateY(-12px) scale(1.025); filter: saturate(1.08); }
+.water-card { z-index: 3; flex-basis: 41%; height: 390px; padding: 44px 36px; border-radius: 32px; background-image: url("https://unccdcop17.org/data/files/viber_image_2025-05-02_18-33-57-552.jpg"); }
+.nature-card { z-index: 1; background-image: url("https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/g/o/Gobi_Desert_Mongolia.jpg?crop=110%2C0%2C3780%2C2079&hei=715&scl=2.9076923076923076&wid=1300"); }
+.land-card { z-index: 2; background-image: url("https://cdn.gov.mn/public/77da5254-5a62-4e35-ba76-8af4410ace65_Pic%20of%20side%20event.webp"); }
+.initiative-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; }
+.initiative-content > span { color: #54e0df; font-size: 9px; font-weight: 800; letter-spacing: 1.2px; }
+.initiative-content h3 { margin: 23px 0 18px; font-size: clamp(19px, 2vw, 29px); line-height: 1.08; letter-spacing: -1px; }
+.initiative-content p { max-width: 410px; margin: 0; font-size: 12px; line-height: 1.6; color: #eef6f5; }
+.initiative-content a { margin-top: auto; display:flex; justify-content:space-between; align-items:center; padding-top:17px; border-top:1px solid rgba(255,255,255,.6); color:#fff; text-decoration:none; font-size:10px; font-weight:800; letter-spacing:.5px; }
+.initiative-content a b { color:#5be1e0; font-size:18px; }
+@media (max-width: 760px) {
+  .facts { padding: 70px 6vw; }
+  .facts-title { text-align: left; margin-bottom: 28px; }
+  .initiative-grid { height: auto; display: grid; gap: 16px; }
+  .initiative-card, .water-card { width: 100%; height: 330px; min-height: 0; margin: 0; padding: 30px 24px; border-radius: 22px; }
+  .initiative-card:hover { transform: translateY(-5px); }
+}
+
